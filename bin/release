@@ -1,6 +1,7 @@
+#!/usr/bin/env bash
+
 cat <<EOF
 ---
 config_vars:
-#  PATH: $PATH:/app/gauge
   PATH: /app/gauge:$PATH
 EOF
