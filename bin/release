@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 
-export PATH=\$PATH:/app/gauge
+cat <<EOF
+---
+config_vars:
+  PATH: $PATH:/app/gauge
+EOF
