@@ -1,3 +1,6 @@
 #!/usr/bin/env bash
 
-export PATH="/app/gauge:$PATH"
+topic "Creating gauge export scripts"
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH="/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
+indent "Created"
