@@ -14,11 +14,6 @@ cd /app/gauge
 curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/gauge
 
 
-function topic() {
-  echo "-----> $*..."
-}
-
-BUILD_DIR=${1:-}
-topic "Creating gauge export scripts"
+echo "Creating gauge export scripts"
 mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH="/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
