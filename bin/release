@@ -6,9 +6,16 @@ config_vars:
   PATH: $PATH:/app/gauge
 EOF
 
-/app/gauge/gauge install java
-/app/gauge/gauge install screenshot
-/app/gauge/gauge install html-report
-/app/gauge/gauge install flash
-/app/gauge/gauge install spectacle
-/app/gauge/gauge -v
+
+qp() {
+    date;
+     /app/gauge/gauge install java
+    /app/gauge/gauge install screenshot
+    /app/gauge/gauge install html-report
+    /app/gauge/gauge install flash
+    /app/gauge/gauge install spectacle
+    /app/gauge/gauge -v
+    date
+}
+
+qp
