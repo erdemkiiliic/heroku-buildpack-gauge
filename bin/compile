@@ -6,7 +6,7 @@ echo "-----> Installing Gauge 1.4.3"
 cd $1
 
 # download the binary (-O) silently (-s)
-curl https://raw.githubusercontent.com/erdemkiiliic/gauge-1.4.3/master/gauge-1.4.3.tar.gz -s -O -ssl3
+curl https://raw.githubusercontent.com/erdemkiiliic/gauge-1.4.3-bin/master/gauge-1.4.3.tar.gz -s -O -ssl3
 
 # make a directory to untar (like unzip) the binary
 mkdir -p vendor/gauge
