@@ -2,5 +2,5 @@
 
 cat <<EOF
 ---
-export PATH="/app/gauge:$PATH"
+  export PATH="/app/gauge:$PATH"
 EOF
