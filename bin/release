@@ -1,18 +1,1 @@
 #!/usr/bin/env bash
-function topic() {
-  echo "-----> $*..."
-}
-
-function indent() {
-  c='s/^/       /'
-  case $(uname) in
-    Darwin) sed -l "$c";;
-    *)      sed -u "$c";;
-  esac
-}
-
-BUILD_DIR=${1:-}
-topic "Creating gauge export scripts"
-mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH="/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
-indent "Created"
