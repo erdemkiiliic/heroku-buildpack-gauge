@@ -11,3 +11,4 @@ EOF
 /app/gauge/gauge install html-report
 /app/gauge/gauge install flash
 /app/gauge/gauge install spectacle
+/app/gauge/gauge -v
