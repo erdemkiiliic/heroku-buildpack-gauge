@@ -13,5 +13,12 @@ cd /app/gauge
 # Install Gauge to /app/gauge
 curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/gauge
 
-# untar the binary to the directory we want
-# tar -C vendor/gauge -xvf gauge-1.4.3.tar.gz
+
+function topic() {
+  echo "-----> $*..."
+}
+
+BUILD_DIR=${1:-}
+topic "Creating gauge export scripts"
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH="/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
