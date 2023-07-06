@@ -2,7 +2,5 @@
 
 cat <<EOF
 ---
-config_vars:
-  PATH: /app/gauge:$PATH
-echo $PATH
+export PATH="/app/gauge:$PATH"
 EOF
