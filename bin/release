@@ -3,5 +3,5 @@
 cat <<EOF
 ---
 config_vars:
-  PATH: $PATH:/usr/local/bin
+  PATH: $PATH:/app/gauge
 EOF
