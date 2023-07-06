@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir> <env-dir>
 
-cat <<EOF
----
-config_vars:
-  PATH: /app/gauge:$PATH
-EOF
+function topic() {
+  echo "-----> $*..."
+}
+
+BUILD_DIR=${1:-}
+
+topic "Creating gauge export scripts"
+mkdir -p $BUILD_DIR/.profile.d
+echo "export PATH=/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
