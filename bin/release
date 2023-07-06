@@ -3,6 +3,6 @@
 cat <<EOF
 ---
 config_vars:
-  PATH:/app/gauge:$PATH
+  PATH: /app/gauge:$PATH
 echo $PATH
 EOF
