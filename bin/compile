@@ -5,11 +5,11 @@ echo "-----> Installing Gauge 1.4.3"
 # change to the the BUILD_DIR ($1)
 cd $1
 
-# Install Gauge to /usr/local/bin
-curl -Ssl https://downloads.gauge.org/stable | sh
+# Install Gauge to /app/gauge
+curl -Ssl https://downloads.gauge.org/stable | sh -- --location=/app/gauge
 
 # make a directory to untar (like unzip) the binary
-# mkdir -p vendor/gauge
+# mkdir -p app/gauge
 
 # untar the binary to the directory we want
 # tar -C vendor/gauge -xvf gauge-1.4.3.tar.gz
