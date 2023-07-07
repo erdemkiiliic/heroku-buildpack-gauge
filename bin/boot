@@ -7,7 +7,7 @@
 set -e
 
 # Set the Gauge binary path
-export PATH="$PATH:$HOME/.gauge"
+export PATH=/app/.gauge:$PATH
 
 # Change to the application directory
 cd /app
