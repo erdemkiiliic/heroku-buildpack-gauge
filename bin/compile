@@ -27,6 +27,6 @@ gauge install xml-report
 echo "-----> Installing Gauge flash plugin"
 gauge install flash
 
-cp -r /app/.gauge /app/build/
+cp -r /app/.gauge $HOME
 
 echo "-----> Gauge buildpack complete"
