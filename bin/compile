@@ -2,7 +2,11 @@
 # bin/compile script for Gauge buildpack
 
 echo "-----> Installing Gauge"
-curl -L https://downloads.gauge.org/stable | sh
+
+mkdir -p /app/.gauge
+cd /app/.gauge
+curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/.gauge
+
 export PATH="$PATH:$HOME/.gauge/bin"
 
 echo "-----> Installing Gauge Java plugin"
