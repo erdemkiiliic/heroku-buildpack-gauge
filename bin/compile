@@ -5,14 +5,14 @@ echo "-----> Installing Gauge (latest)"
 BUILD_DIR=${1:-}
 
 # make a directory for gauge
-mkdir -p /app/gauge
+mkdir -p /app/.gauge
 
-cd /app/gauge
+cd /app/.gauge
 
-# Install Gauge to /app/gauge
-curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/gauge
+# Install Gauge to /app/.gauge
+curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/.gauge
 
 
 echo "Creating gauge export scripts"
 mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=/app/gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
+echo "export PATH=/app/.gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
