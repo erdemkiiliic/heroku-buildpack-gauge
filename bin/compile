@@ -19,4 +19,5 @@ echo "export PATH=/app/.gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
 
 
 echo "Creating maven export scripts"
+mkdir -p $BUILD_DIR/.profile.d
 echo "export PATH=/app/.maven/bin:$PATH" >> $BUILD_DIR/.profile.d/mvn.sh
