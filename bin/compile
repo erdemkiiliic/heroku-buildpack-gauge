@@ -1,18 +1,30 @@
 #!/usr/bin/env bash
 
-echo "-----> Installing Gauge (latest)"
+# This script is executed during the build process on Heroku.
+# It is responsible for installing Gauge and its dependencies.
 
-BUILD_DIR=${1:-}
+# Print all executed commands
+set -e
 
-# make a directory for gauge
-mkdir -p /app/.gauge
+# Define the versions
+GAUGE_VERSION="1.4.3"
 
-cd /app/.gauge
+echo "-----> Installing Gauge $GAUGE_VERSION"
 
-# Install Gauge to /app/.gauge
-curl -SsL https://downloads.gauge.org/stable | sh -s -- --location=/app/.gauge
+# Install dependencies
+apt-get update
+apt-get install -y unzip
 
+# Download Gauge binary
+curl -SsL -o gauge.zip "https://github.com/getgauge/gauge/releases/download/v$GAUGE_VERSION/gauge-$GAUGE_VERSION-linux.x86_64.zip"
 
-echo "Creating gauge export scripts"
-mkdir -p $BUILD_DIR/.profile.d
-echo "export PATH=/app/.gauge:$PATH" >> $BUILD_DIR/.profile.d/gauge.sh
+# Unzip Gauge
+unzip -o gauge.zip -d /app/vendor
+
+# Set the Gauge binary path
+export PATH="/app/vendor/gauge:$PATH"
+
+# Print the Gauge version to verify installation
+gauge --version
+
+echo "-----> Gauge $GAUGE_VERSION installation complete."
