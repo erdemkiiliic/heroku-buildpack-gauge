@@ -12,8 +12,8 @@ GAUGE_VERSION="1.4.3"
 echo "-----> Installing Gauge $GAUGE_VERSION"
 
 # Install dependencies
-apt-get update
-apt-get install -y unzip
+# apt-get update
+# apt-get install -y unzip
 
 # Download Gauge binary
 curl -SsL -o gauge.zip "https://github.com/getgauge/gauge/releases/download/v$GAUGE_VERSION/gauge-$GAUGE_VERSION-linux.x86_64.zip"
