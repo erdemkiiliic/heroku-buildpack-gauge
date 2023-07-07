@@ -12,4 +12,19 @@ export PATH="$PATH:$HOME/.gauge"
 echo "-----> Installing Gauge Java plugin"
 gauge install java --version 0.9.2
 
+echo "-----> Installing Gauge Screenshot plugin"
+gauge install screenshot
+
+echo "-----> Installing Gauge html-report plugin"
+gauge install html-report
+
+echo "-----> Installing Gauge spectacle plugin"
+gauge install spectacle
+
+echo "-----> Installing Gauge xml-report plugin"
+gauge install xml-report
+
+echo "-----> Installing Gauge flash plugin"
+gauge install flash
+
 echo "-----> Gauge buildpack complete"
