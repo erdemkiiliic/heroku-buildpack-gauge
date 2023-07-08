@@ -7,7 +7,7 @@ This buildpack also installs all gauge plugins. You can remove the plugins you d
 This command in the compile file copies the gauge files to the build folder and the gauge becomes available in the runtime. So, we can use Gauge in Procfile.
 
 an example procfile:
-<code>mvn gauge:execute</code>
+<code>worker: mvn gauge:execute</code>
 
 
 <b>Installation</b> <br>
